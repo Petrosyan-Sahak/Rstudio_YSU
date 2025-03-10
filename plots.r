@@ -105,3 +105,15 @@ boxplot(random_vector, horizontal = TRUE, main = "Boxplot 1", col = "lightblue")
 # Plot the second boxplot
 boxplot(random_vector_int, horizontal = TRUE, main = "Boxplot 2", col = "lightgreen")
 
+
+
+
+
+library(datasets)
+print(mtcars)
+boxplot(mtcars$mpg, horizontal=T, col='red')
+
+plot(mtcars$hp, mtcars$mpg, lwd=1.3, pch=13)
+
+
+boxplot(mpg~cyl, data=mtcars, main="MPG vs NoCyl", xlab="number of CYlinders", ylab="Miles Per Gallon")
