@@ -32,8 +32,6 @@ dev.off()
 pacman::p_load(pacman, dplyr, GGally,ggvis, httr, lubridate, plotly, rio, stringr,
                tidyr, rmarkdown, shiny, ggplot2, ggthemes)
 
-
-
 library(datasets)
 head(iris)
 
@@ -116,4 +114,32 @@ boxplot(mtcars$mpg, horizontal=T, col='red')
 plot(mtcars$hp, mtcars$mpg, lwd=1.3, pch=13)
 
 
-boxplot(mpg~cyl, data=mtcars, main="MPG vs NoCyl", xlab="number of CYlinders", ylab="Miles Per Gallon")
+boxplot(mpg~gear, data=mtcars, main="MPG vs NoCyl", xlab="number of CYlinders", ylab="Miles Per Gallon")
+
+par(mfrow=c(1,1))
+head(mtcars)
+hist(mtcars$wt)
+hist(mtcars$mpg)
+plot(mtcars$wt, mtcars$mpg,
+     pch=19,
+     cex=1.5,
+     )
+
+lynx
+head(lynx)
+hist(lynx)
+hist(lynx, breaks=14, freq=F)
+
+curve(dnorm(x, mean=mean(lynx), sd = sd(lynx)), add=T)
+lines(density(lynx), col="blue", lwd=2)
+lines(density(lynx, adjust=3), col="purple", lwd = 1)
+rug(lynx, lwd=2, col="green")
+
+head(iris)
+summary(iris$Species)
+summary(iris$Sepal.Length)
+summary(iris)
+
+pacman::p_load(psych)
+describe(iris$Sepal.Length)
+describe(iris)
