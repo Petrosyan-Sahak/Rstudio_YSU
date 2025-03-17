@@ -143,3 +143,8 @@ summary(iris)
 pacman::p_load(psych)
 describe(iris$Sepal.Length)
 describe(iris)
+
+cov(cars$speed, cars$dist)
+cor(cars$speed, cars$dist)
+plot(dist~speed, data=cars, pch=16)
+plot(cars$speed, cars$dist, pch=16)
