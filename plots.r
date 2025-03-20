@@ -148,3 +148,19 @@ cov(cars$speed, cars$dist)
 cor(cars$speed, cars$dist)
 plot(dist~speed, data=cars, pch=16)
 plot(cars$speed, cars$dist, pch=16)
+
+x <- rnorm(100); y <- rnorm(100);
+plot(x, y, pch=16)
+
+x <- rnorm(100); y <- -2.4*x + rnorm(100);
+plot(x, y, pch=16)
+
+
+head(state.x77)
+state <- as.data.frame(state.x77)
+plot(Murder~Illiteracy, data=state, pch=16)
+cor(state$Illiteracy, state$Murder)
+
+x <- rnorm(100); y <- rnorm(100);
+plot(x, y, pch=16)
+c(cor(x,y), cov(x, y))
